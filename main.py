@@ -30,9 +30,8 @@ PREWRITTEN_HINTS = {
 }
 
 def configure_gemini():
-    """Configure Gemini from env only (no UI)."""
     import google.generativeai as genai
-    api_key = os.getenv("GEMINI_API_KEY")
+    api_key = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
     if api_key:
         try:
             genai.configure(api_key=api_key)
@@ -42,6 +41,7 @@ def configure_gemini():
             st.session_state["gemini_error"] = str(e)
     else:
         st.session_state["gemini_ready"] = False
+
 
 def gemini_reply(prompt: str, temp: float = 0.6, cache_key: Optional[str] = None) -> str:
     """Call Gemini with a small per-session cache + cooldown + graceful 429 fallback."""
