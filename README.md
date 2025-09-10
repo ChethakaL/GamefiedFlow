@@ -34,4 +34,4 @@ This was built as a prototype for an **AI Learning Academy** — combining:
 1. **Clone the repo**
    ```bash
    https://github.com/ChethakaL/GamefiedFlow.git
-   cd ai-starter-quest
+   cd GamefiedFlow
