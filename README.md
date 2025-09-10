@@ -33,5 +33,5 @@ This was built as a prototype for an **AI Learning Academy** — combining:
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/ai-starter-quest.git
+   https://github.com/ChethakaL/GamefiedFlow.git
    cd ai-starter-quest
